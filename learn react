@@ -1,1 +1,16 @@
 https://github.com/pranav110299/learning-react.git
+https://www.codecademy.com/courses/react-101/lessons/react-jsx-intro/exercises/reactdom-render-variable
+
+1] Passing a Variable to ReactDOM.render() :
+eg =
+import React from 'react';
+import ReactDOM from 'react-dom';
+
+// Write code here:
+const myList = (
+  <ul>
+  <li>batting</li>
+  <li>bowling</li>
+  </ul>
+);
+ReactDOM.render(myList,document.getElementById('app'));
