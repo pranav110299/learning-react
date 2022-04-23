@@ -72,3 +72,28 @@ ReactDOM.render(kitty, document.getElementById('app'));
 5] JSX Conditionals: If Statements That Don't Work -
 Here’s a rule that you need to know: you can not inject an if statement into a JSX expression. 
 The reason why has to do with the way that JSX is compiled. 
+
+6] JSX Conditionals: If Statements That Do Work : How can you write a conditional, if you can’t inject an if statement into JSX ? Well, one option is to write an if statement, and not inject it into JSX.
+eg = 
+import React from 'react';
+import ReactDOM from 'react-dom';
+
+function coinToss() {
+  // This function will randomly return either 'heads' or 'tails'.
+  return Math.random() < 0.5 ? 'heads' : 'tails';
+}
+
+const pics = {
+  kitty: 'https://content.codecademy.com/courses/React/react_photo-kitty.jpg',
+  doggy: 'https://content.codecademy.com/courses/React/react_photo-puppy.jpeg'
+};
+let img;
+
+// if/else statement begins here:
+if (coinToss() === 'heads') {
+  img = <img src={pics.kitty} />
+  
+} else {
+  img = <img src={pics.doggy} />
+}
+ReactDOM.render(img, document.getElementById('app'));
