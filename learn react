@@ -68,3 +68,7 @@ const kitty = (
 );
 
 ReactDOM.render(kitty, document.getElementById('app'));
+
+5] JSX Conditionals: If Statements That Don't Work -
+Here’s a rule that you need to know: you can not inject an if statement into a JSX expression. 
+The reason why has to do with the way that JSX is compiled. 
