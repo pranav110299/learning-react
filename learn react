@@ -146,3 +146,18 @@ ReactDOM.render(
 	favoriteFoods, 
 	document.getElementById('app')
 );
+
+ 9] .map in JSX : If you want to create a list of JSX elements, then .map() is often your best bet. 
+ eg = 
+ import React from 'react';
+import ReactDOM from 'react-dom';
+
+const people = ['Rowe', 'Prevost', 'Gare'];
+
+const peopleLis = people.map(person =>
+  // expression goes here:
+const peopleLis = strings.map(string => <li>{person}</li>);
+);
+
+// ReactDOM.render goes here:
+ReactDOM.render(<ul>{peopleLis}</ul>, document.getElementById('app'));
