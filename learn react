@@ -46,3 +46,25 @@ ReactDOM.render(
   <h1>{2 + 3}</h1>,
   document.getElementById('app')
 );
+
+4] Event Listeners in JSX : JSX elements can have event listeners, just like HTML elements can. Programming in React means constantly working with event listeners.
+An event listener attribute’s name should be something like onClick or onMouseOver: the word on, plus the type of event that you’re listening for. 
+eg =
+import React from 'react';
+import ReactDOM from 'react-dom';
+
+function makeDoggy(e) {
+  // Call this extremely useful function on an <img>.
+  // The <img> will become a picture of a doggy.
+  e.target.setAttribute('src', 'https://content.codecademy.com/courses/React/react_photo-puppy.jpeg');
+  e.target.setAttribute('alt', 'doggy');
+}
+
+const kitty = (
+	<img 
+		src="https://content.codecademy.com/courses/React/react_photo-kitty.jpg" 
+		alt="kitty"
+    onClick={makeDoggy} />
+);
+
+ReactDOM.render(kitty, document.getElementById('app'));
