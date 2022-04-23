@@ -180,3 +180,16 @@ const peopleLis = people.map((person, i) =>
 const peopleLis = strings.map(string => 
 // ReactDOM.render goes here:
 ReactDOM.render(<ul>{peopleLis}</ul>, document.getElementById('app'));
+
+11] React.createElement : You can write React code without using JSX at all!
+
+The majority of React programmers do use JSX, and we will use it for the remainder of this tutorial, but you should understand that it is possible to write React code without it.
+
+eg =
+const greatestDivEver = <div>i am div</div>;
+then,
+const greatestDivEver = React.createElement(
+  'div',
+  null,
+  'i am div'
+);
