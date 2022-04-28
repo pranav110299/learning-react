@@ -294,3 +294,22 @@ Let’s assume that this refers to an instance of your component class, as will 
     return <h1>I like {this.food}.</h1>;
   }
 }
+
+15] Use an Event Listener in a Component :
+Render functions often contain event listeners. Recall that an event handler is a function that gets called in response to an event. In React, you define event handlers as methods on a component class. 
+eg =
+import React from 'react';
+import ReactDOM from 'react-dom';
+
+class Button extends React.Component {
+  scream() {
+    alert('AAAAAAAAHHH!!!!!');
+  }
+
+  render() {
+    return <button onClick={this.scream}>AAAAAH!</button>;
+  }
+}
+ReactDOM.render(<Button />, document.getElementById('app'));
+  
+
