@@ -279,3 +279,18 @@ ReactDOM.render(
 	<TonightsPlan />,
 	document.getElementById('app')
 );
+
+15] Use this in a Component : 
+this refers to an instance of IceCreamGuy. The less simple answer is that this refers to the object on which this‘s enclosing method, in this case .render(), is called. It is almost inevitable that this object will be an instance of IceCreamGuy, but technically it could be something else.
+
+Let’s assume that this refers to an instance of your component class, as will be the case in all examples in this course. IceCreamGuy has two methods: .food and .render(). Since this will evaluate to an instance of IceCreamGuy, this.food will evaluate to a call of IceCreamGuy‘s .food method. This method will, in turn, evaluate to the string “ice cream.”
+ eg=
+ class IceCreamGuy extends React.Component {
+  get food() {
+    return 'ice cream';
+  }
+ 
+  render() {
+    return <h1>I like {this.food}.</h1>;
+  }
+}
