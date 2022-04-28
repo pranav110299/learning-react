@@ -330,3 +330,23 @@ class ProfilePage extends React.Component {
     );
   }
 }
+
+17] Export variable : export comes from ES6’s module system, just like import does. export and import are meant to be used together, and you rarely see one without the other. In one file, place the keyword export immediately before something that you want to export. That something can be any top-level var, let, const, function, or class.
+Style of importing and exporting in JavaScript is known as “named exports.”
+eg= 
+import React from 'react';
+
+export class NavBar extends React.Component {
+  render() {
+    const pages = ['home', 'blog', 'pics', 'bio', 'art', 'shop', 'about', 'contact'];
+    const navLinks = pages.map(page => {
+      return (
+        <a href={'/' + page}>
+          {page}
+        </a>
+      )
+    });
+
+    return <nav>{navLinks}</nav>;
+  }
+}
