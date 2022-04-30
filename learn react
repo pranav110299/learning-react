@@ -483,3 +483,6 @@ class Example extends React.Component {
     return <div></div>;
   }
 }
+23] Call this.setState from Another Function :
+
+24]
