@@ -461,3 +461,25 @@ constructor(props) {
   }
 }
 ReactDOM.render(<App />, document.getElementById('app'));
+
+22] Update state with this.setState : A component can do more than just read its own state. A component can also change its own state.
+
+A component changes its state by calling the function this.setState().
+
+this.setState() takes two arguments: an object that will update the component’s state, and a callback. You basically never need the callback.
+eg =
+import React from 'react';
+
+class Example extends React.Component {
+  constructor(props) {
+  	super(props);
+    this.state = {
+      mood:   'great',
+      hungry: false
+    };
+  }
+
+  render() {
+    return <div></div>;
+  }
+}
