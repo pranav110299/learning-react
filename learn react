@@ -485,4 +485,4 @@ class Example extends React.Component {
 }
 23] Call this.setState from Another Function :
 
-24]
+24] Introduction to Lifecycle Methods :
