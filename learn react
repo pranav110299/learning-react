@@ -486,3 +486,37 @@ class Example extends React.Component {
 23] Call this.setState from Another Function :
 
 24] Introduction to Lifecycle Methods :
+
+25] THE STATE HOOK
+* Update Function Component State : the State Hook, the most common Hook used for building React components. 
+useState() is a JavaScript function defined in the React library. When we call this function, it returns an array with two values:
+
+1) current state - the current value of this state
+2) state setter - a function that we can use to update the value of this state
+eg =
+import React, { useState } from 'react';
+
+export default function ColorPicker() {
+  const [color, setColor] = useState();
+
+ const divStyle = {backgroundColor: color};
+
+  return (
+    <div style={divStyle}>
+      <p>The color is {color}</p>
+      <button onClick={() => setColor('Aquamarine')}>
+        Aquamarine
+      </button>
+      <button onClick={() => setColor('BlueViolet')}>
+        BlueViolet
+      </button>
+      <button onClick={() => setColor('Chartreuse')}>
+        Chartreuse
+      </button>
+      <button onClick={() => setColor('CornflowerBlue')}>
+        CornflowerBlue
+      </button>
+    </div>
+  );
+}
+
